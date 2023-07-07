@@ -1,0 +1,153 @@
+@import url('https://fonts.cdnfonts.com/css/fifa-welcome');
+                
+body {
+    display: grid;
+    grid-template-rows: 150px 1fr;
+
+    background-color: #10006b !important;
+    font-family: 'FIFA Welcome', sans-serif !important;
+}
+
+nav {
+    padding: 20px;
+    background-color: #0800b5;
+    color: #fff;
+    font-size: 25px;
+
+    position: fixed;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+    margin: 0 !important;
+}
+nav h2 img {
+    width: 60px;
+    filter: invert(100%);
+}
+nav input {
+    margin: auto;
+    font-size: 20px !important;
+}
+nav #wcc-place {
+    width: 80px !important;
+}
+nav #wcc-year {
+    width: 220px;
+    margin: auto;
+}
+nav #wcc-text {
+    width: 120px;
+}
+
+main {
+    margin-top: 360px;
+    color: #fff;
+}
+
+#wc-feedback {
+    position: fixed;
+    top: 425px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+#wc-search {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    background-image: url("../img/football.png");
+    background-size: cover;
+    cursor: url("../img/cursor.png"), auto;
+}
+#wc-search:hover {
+    border:1px black solid;
+    opacity: 0.9;
+}
+#wc-search:active {
+    opacity: 0.7;
+}
+#wc-search.loading {
+    animation: rotate 0.5s linear;
+}
+@keyframes rotate { 
+    100% { transform: rotate(360deg); } 
+}
+
+#wcchampions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    place-items: center;
+
+    padding: 20px;
+}
+@media (min-width: 576px) {
+    #wc-feedback {
+        width: auto;
+    }
+
+    #wcchampions {
+        grid-template-columns: repeat(2, 1fr);        
+    }
+}
+@media (min-width: 768px) {
+    main {
+        margin-top: 160px;
+    }
+
+    #wc-feedback {
+        top: 240px;
+    }
+
+    #wcchampions {
+        grid-template-columns: repeat(3, 1fr);        
+    }
+}
+@media (min-width: 992px) {
+    nav {
+        font-size: 30px;
+    }
+
+    #wcchampions {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (min-width: 1200px) {
+    #wcchampions {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (min-width: 1700px) {
+    #wcchampions {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+#wcchampions .wcchampions-item {
+    padding: 10px;
+    box-shadow: 0px 0px 15px 3px #ee3dd6;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    max-width: 220px;
+    background: linear-gradient(to bottom, blue, darkblue);
+}
+#wcchampions .wcchampions-item b {
+    font-size: 25px;
+    color: #FFD700;
+}
+#wcchampions .wcchampions-item img {
+    width: 200px;
+    height: 134px;
+    border: 1px #495057 solid;
+}
+#wcchampions .wcchampions-item [data-place="1"] {
+    color: #FFD700;
+}
+#wcchampions .wcchampions-item [data-place="2"] {
+    color: #C0C0C0;
+}
+#wcchampions .wcchampions-item [data-place="3"] { 
+    color: #CD7F32;
+}
