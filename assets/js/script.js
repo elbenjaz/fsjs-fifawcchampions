@@ -6,7 +6,7 @@ const search = () => {
         */
         [{value: yearFrom}, {value: yearTo }] = document.querySelectorAll("#wcc-year input"),
         text      = document.querySelector("#wcc-text").value,
-        requiredFields = true;
+        requiredFields = false;
 
     let feedback     = document.querySelector("#wc-feedback"),
         results      = document.querySelector("#wc-results"),
@@ -51,10 +51,6 @@ const search = () => {
                              </div>
 
                              <p>WC ${champion.worldcup}</p>
-
-                             <button class="btn btn-primary">
-                                 <i class="fa-solid fa-photo-film"></i> Play multimedia
-                             </button>
                          </div>`;
                 totalResults++;
             }
