@@ -71,7 +71,7 @@ main {
     animation: rotate 0.5s linear;
 }
 @keyframes rotate { 
-    100% { transform: rotate(360deg); } 
+    100% { transform: rotate(-360deg); } 
 }
 
 #wcchampions {
